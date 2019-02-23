@@ -23,6 +23,9 @@
     "type": "git",
     "url": "git+https://github.com/IMA-WorldHealth/dhis2-api.git"
   },
+  "publishConfig": {
+    "access": "public"
+  }
   "keywords": [
     "DHIS2"
   ],
