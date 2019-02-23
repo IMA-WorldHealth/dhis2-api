@@ -1,11 +1,10 @@
-const axios = require('axios');
+const API = require('./base');
 
-class Users {
-  constructor(api) {
-    this.http = axis.create({
-      url : `${api.base}/system`,
-      auth: api.auth,
-    });
+class Users extends API {
+  constructor() {
+    super();
+    this.name = 'users';
+    this.base = '/users';
   }
 
   /**
@@ -29,3 +28,5 @@ class Users {
     return this.http.get(`/${id}`);
   }
 }
+
+module.exports = new Users();
