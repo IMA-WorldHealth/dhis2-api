@@ -1,37 +1,15 @@
-const debug = require('debug')('dhis2:api');
-const shortid = require('shortid');
-const http = require('../lib/http');
-
-const LoggerProxy = {
-  get(target, method, receiver) {
-    const uid = shortid();
-    const fn = Reflect.get(target, method);
-
-    return async (...args) => {
-      try {
-        debug(`(${uid}) (${Date.now()}) - ${this.name}.${method}.`);
-        const result = await fn.apply(receiver, args);
-        debug(`(${uid}) (${Date.now()}) - ${this.name}.${method}.`);
-        return result;
-      } catch (error) {
-        debug(`(${uid}) (${Date.now()}) - ERROR ${this.name}.${method}.`);
-        throw error;
-      }
-    };
-  },
-};
+const { client } = require('../lib/http');
 
 /**
  * @class BaseAPI
  *
  * @description
- * The base of all API routes that has the p
- *
- *
+ * The base of all API routes that binds the HTTP module
+ * to the API.
  */
 class BaseAPI {
   constructor() {
-    this.http = new Proxy(http, LoggerProxy);
+    this.http = client;
   }
 }
 

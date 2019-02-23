@@ -2,7 +2,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "debug": "^4.1.1",
-    "dotenv": "^6.2.0",
     "shortid": "^2.2.14"
   },
   "devDependencies": {
