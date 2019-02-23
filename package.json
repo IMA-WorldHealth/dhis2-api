@@ -11,7 +11,7 @@
     "eslint-plugin-import": "^2.16.0"
   },
   "name": "@ima-worldhealth/dhis2-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A promise-based wrapper for the DHIS2 web API",
   "main": "index.js",
   "directories": {
