@@ -9,5 +9,28 @@
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0"
-  }
+  },
+  "name": "@ima-worldhealth/dhis2-api",
+  "version": "0.0.1",
+  "description": "A promise-based wrapper for the DHIS2 web API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMA-WorldHealth/dhis2-api.git"
+  },
+  "keywords": [
+    "DHIS2"
+  ],
+  "author": "jniles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IMA-WorldHealth/dhis2-api/issues"
+  },
+  "homepage": "https://github.com/IMA-WorldHealth/dhis2-api#readme"
 }
