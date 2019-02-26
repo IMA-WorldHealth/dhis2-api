@@ -14,8 +14,9 @@ class Users extends API {
    * @description
    * Reads a page of users from the DHIS2 API.
    */
-  list() {
-    return this.http.get('/', { params: this.params });
+  list(options = {}) {
+    const params = this.getHttpParams(options);
+    return this.http.get(this.base, { params });
   }
 
 
@@ -26,7 +27,7 @@ class Users extends API {
    * Loads the information of a single user.
    */
   get(id) {
-    return this.http.get(`/${id}`);
+    return this.http.get(`${this.base}/${id}`);
   }
 }
 
