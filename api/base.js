@@ -11,6 +11,19 @@ class BaseAPI {
   constructor() {
     this.http = client;
   }
+
+  /**
+   * @method getHttpParams
+   *
+   * @description
+   * A handy way to get HTTP parameters by merging the class params
+   * with custom parameters.
+   *
+   * @return {Object} the http parameters
+   */
+  getHttpParams(options = {}) {
+    return Object.assign({}, this.params, options);
+  }
 }
 
 module.exports = BaseAPI;
