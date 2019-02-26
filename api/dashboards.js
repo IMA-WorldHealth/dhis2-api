@@ -14,8 +14,9 @@ class Dashboards extends API {
    * @description
    * Reads the data out of dashboards route.
    */
-  dashboards() {
-    return this.http.get(this.base, { params: this.params });
+  list(options = {}) {
+    const params = this.getHttpParams(options);
+    return this.http.get(this.base, { params });
   }
 }
 
