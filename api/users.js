@@ -5,6 +5,7 @@ class Users extends API {
     super();
     this.name = 'users';
     this.base = '/users';
+    this.params = { paging: false };
   }
 
   /**
@@ -14,7 +15,7 @@ class Users extends API {
    * Reads a page of users from the DHIS2 API.
    */
   list() {
-    return this.http.get('/');
+    return this.http.get('/', { params: this.params });
   }
 
 
