@@ -17,6 +17,17 @@ class Auth extends API {
     return this.http.get(this.base);
   }
 
+
+  /**
+   * @method isValidCredentials
+   *
+   * @description
+   * Tests to see the provided credentials are valid.
+   */
+  isValidCredentials(username, password) {
+    return this.http.get(this.base, { auth: { username, password } });
+  }
+
   /**
    * @method authorities
    *
