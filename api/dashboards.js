@@ -18,6 +18,19 @@ class Dashboards extends API {
     const params = this.getHttpParams(options);
     return this.http.get(this.base, { params });
   }
+
+  /**
+   *
+   * @method metadata
+   *
+   * @description
+   * Gets the JSON metadata for a dashboard
+   */
+  metadata(id, options = {}) {
+    const params = this.getHttpParams(options);
+    const base = `dashboards/${id}/metadata.json`;
+    return this.http.get(base, { params });
+  }
 }
 
 module.exports = new Dashboards();
