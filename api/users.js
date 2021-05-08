@@ -19,7 +19,6 @@ class Users extends API {
     return this.http.get(this.base, { params });
   }
 
-
   /**
    * @method get
    *
