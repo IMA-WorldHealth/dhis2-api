@@ -22,7 +22,7 @@ class BaseAPI {
    * @return {Object} the http parameters
    */
   getHttpParams(options = {}) {
-    return Object.assign({}, this.params, options);
+    return { ...this.params, ...options };
   }
 }
 
