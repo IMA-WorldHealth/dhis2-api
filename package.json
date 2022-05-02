@@ -3,7 +3,7 @@
     "axios": "^0.27.2",
     "debug": "^4.1.1",
     "qs": "^6.6.0",
-    "release-it": "^14.0.1",
+    "release-it": "^15.0.0",
     "shortid": "^2.2.14"
   },
   "devDependencies": {
